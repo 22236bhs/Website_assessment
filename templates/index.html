@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Steam website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="head">
+        <h2 class="head-text">search</h2>
+        <input type="text" placeholder="Search...">
+        
+    </div>
+    <div class="w3-container">
+    <div class="three-column">
+    {% for name in names %}
+    <div class="w3-card-4">
+    <h2>
+        {{ name[0] }}
+    </h2>
+    
+    <img src="{{ url_for('static', filename='images/' + name[1]) }}" alt="Steam game picture" class="card-image">
+    </div>
+    {% endfor %}
+    </div>
+    </div>
+</body>
+</html>

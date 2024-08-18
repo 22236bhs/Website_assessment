@@ -1,0 +1,37 @@
+.head{
+    height: 200px;
+    background-color: crimson;
+}
+
+.head-text{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.head input[type=text]{
+    text-align: center;
+    margin-left: auto;
+}
+
+
+.card-image{
+    width: 100%;
+}
+
+.w3-card-4{
+    width: 33%;
+    display: inline-block;
+    margin: 0px;
+    text-align: center;
+}
+
+.w3-card-4:active{
+    width: 80%;
+    
+}
+
+.card-image:active{
+    width: 50%;
+    text-align: left;
+    margin-left: 0px;
+}
