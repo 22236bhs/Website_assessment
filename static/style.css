@@ -13,15 +13,65 @@
     margin-left: auto;
 }
 
-
-.card-image{
-    width: 100%;
+.main.w3-card-4{
+    width: 300px;
 }
 
-.w3-card-4{
-    width: 33%;
-    display: inline-block;
-    margin: 0px;
+.three-column{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+h2.main{
+    font-size: 20px;
+}
+
+a.main{
+    text-decoration: none;
+}
+
+.game.one-two-one-column{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+}
+
+.game.info{
+    border-right: black solid 3px;
+    border-left: black solid 3px; 
+    padding: 0px 10px 0px 10px;
+    height: 600px;
+}
+
+.game.game-name{
     text-align: center;
 }
 
+.game.picture-card{
+    width: 300px;
+    max-width: fit-content;
+    padding-left: 10px;
+}
+
+p.game.description{
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+.game.titles{
+    text-decoration: underline;
+}
+
+.game.back-button{
+    vertical-align: center;
+}
+
+.game.extra{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.game.extra-info{
+    border-bottom: black solid 3px;
+}

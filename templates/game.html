@@ -1,8 +1,33 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1>{{ game['name'] }}</h1>
-<h2>{{game['hours']}} hours</h2>
-<h3>{{ game["description"] }}</h3>
-<img src="{{ url_for('static', filename='images/' + game['pic_link']) }}" alt="">
-<a href="/">back</a>
+
+<div class="game one-two-one-column">
+
+    <div class="game picture-card">
+        <h1 class="game game-name">{{ game['name'] }}</h1>
+        <img src="{{ url_for('static', filename='images/' + game['pic_link']) }}" alt="Steam library picture" class="game game-picture">
+        <a href="/" class="game back-button">Back</a>
+    </div>
+
+    <div class="game info">
+        <h1 class="game titles">Steam Description</h1>
+        <p class="game description">{{ game["description"] | replace('\n', '<br>') | safe }}</p>
+        
+    </div>
+
+    <div class="game extra">
+        <div class="game extra-info">
+            <h1 class="game titles">Details</h1>
+            <h3 class="game">Release Date: {{game['release_date']}}</h2>
+        </div>
+        <div class="game my-experience">
+            <h1 class="game titles">My experience</h1>
+            <h3 class="game hours">{{game['hours']}} hours</h3>
+        </div>
+    </div>
+
+    
+</div>
+
+
 {% endblock %}

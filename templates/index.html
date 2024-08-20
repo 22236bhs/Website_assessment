@@ -1,21 +1,22 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="head">
-    <h2 class="head-text">search</h2>
+
+<div class="main head">
+    <h2 class="main head-text">search</h2>
     <input type="text" placeholder="Search...">
 
 </div>
-<div class="w3-container">
-    <div class="three-column">
+<div class="main w3-container">
+    <div class="main three-column">
         {% for name in names %}
-        <a href="game/{{name[0]}}">
-            <div class="w3-card-4">
-                <h2>
+        <a href="game/{{name[0]}}" class="main">
+            <div class="main w3-card-4">
+                <h2 class="main">
                     {{ name[1] }}
                 </h2>
 
-                <img src="{{ url_for('static', filename='images/' + name[2]) }}" alt="Steam game picture"
-                    class="card-image">
+                <img src="{{ url_for('static', filename='images/' + name[2]) }}" alt="Steam library picture"
+                    class="main card-image">
             </div>
         </a>
         {% endfor %}
