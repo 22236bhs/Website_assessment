@@ -25,13 +25,3 @@
     text-align: center;
 }
 
-.w3-card-4:active{
-    width: 80%;
-    
-}
-
-.card-image:active{
-    width: 50%;
-    text-align: left;
-    margin-left: 0px;
-}
