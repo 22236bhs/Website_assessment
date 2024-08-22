@@ -5,7 +5,6 @@
 
 .head-text{
     text-align: center;
-    margin-top: 20px;
 }
 
 .head input[type=text]{
@@ -17,10 +16,11 @@
     width: 300px;
 }
 
+
 .three-column{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    margin: auto;
 }
 
 h2.main{
@@ -31,10 +31,14 @@ a.main{
     text-decoration: none;
 }
 
+.main.game-name{
+    text-align: center;
+    padding-top: 6px;
+}
+
 .game.one-two-one-column{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    gap: 20px;
 }
 
 .game.info{
@@ -51,27 +55,51 @@ a.main{
 .game.picture-card{
     width: 300px;
     max-width: fit-content;
-    padding-left: 10px;
+    border-left: black solid 3px;
+
+} 
+
+
+
+.game.game-picture{
+    width: 100%;
 }
 
 p.game.description{
     font-size: 13px;
     line-height: 1.35;
+    overflow: auto;
+    height: 440px;  
 }
 
 .game.titles{
     text-decoration: underline;
 }
 
-.game.back-button{
-    vertical-align: center;
-}
-
 .game.extra{
     display: grid;
     grid-template-rows: 1fr 2fr;
+    border-right: black solid 3px
 }
 
 .game.extra-info{
     border-bottom: black solid 3px;
+}
+
+.body{
+    width: 90%;
+    margin: auto;
+}
+
+div.main{
+    margin-left: 18px;
+}
+
+.main.game-card:hover{
+    scale: 1.1;
+}
+
+.main.game-card{
+    transition: 0.2s;
+    background-color: #ffffff;
 }

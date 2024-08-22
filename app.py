@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import sqlite3
 app = Flask(__name__)
 
-DATABASE = "SteamDb.db"
+DATABASE = "gamedb.db"
 
 def ExQuery(string, params=()):
     with sqlite3.connect(DATABASE) as db:
@@ -15,7 +15,7 @@ def home():
 
 @app.route("/game/<int:id>")
 def Game(id):
-    game = ExQuery('''SELECT steam_library.id, name, studios.studio_name, hours, steam_release_date, steam_description, picture_link 
+    game = ExQuery('''SELECT steam_library.id, name, studios.studio_name, hours, steam_release_date, steam_description, picture_link, my_rating, my_review
 FROM steam_library 
 JOIN studios ON steam_library.studio_id = studios.id 
 WHERE steam_library.id = ?''', (id,))
@@ -26,7 +26,9 @@ WHERE steam_library.id = ?''', (id,))
             "hours": game[3],
             "release_date": game[4],
             "description": game[5],
-            "pic_link": game[6]}
+            "pic_link": game[6],
+            "my_rating": game[7],
+            "my_review": game[8]}
     game["description"] = game["description"].replace("\\n", "\n")
     return render_template("game.html", game=game)
 

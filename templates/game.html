@@ -19,10 +19,14 @@
         <div class="game extra-info">
             <h1 class="game titles">Details</h1>
             <h3 class="game">Release Date: {{game['release_date']}}</h2>
+            <h3 class="game">Developer: {{ game['studio_name'] }}</h3>
         </div>
         <div class="game my-experience">
             <h1 class="game titles">My experience</h1>
-            <h3 class="game hours">{{game['hours']}} hours</h3>
+            <h3 class="game hours pers-stats">Playtime: {{game['hours']}} hours</h3>
+            <h3 class="game rating pers-stats">My rating: {{ game['my_rating'] }}/10</h3>
+            <h3 class="game my-review pers-ststs">My Review:</h3>
+            <p class="game my-review">{{ game['my_review'] }}</p>
         </div>
     </div>
 

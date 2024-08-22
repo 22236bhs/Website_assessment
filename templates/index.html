@@ -6,15 +6,14 @@
     <input type="text" placeholder="Search...">
 
 </div>
-<div class="main w3-container">
+<div class="main">
     <div class="main three-column">
         {% for name in names %}
-        <a href="game/{{name[0]}}" class="main">
+        <a href="game/{{name[0]}}" class="main game-card">
             <div class="main w3-card-4">
-                <h2 class="main">
+                <h2 class="main game-name">
                     {{ name[1] }}
                 </h2>
-
                 <img src="{{ url_for('static', filename='images/' + name[2]) }}" alt="Steam library picture"
                     class="main card-image">
             </div>
