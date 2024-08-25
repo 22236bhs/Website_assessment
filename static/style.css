@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Kanit');
+@import url('https://fonts.googleapis.com/css2?family=Kanit');
 
 body{
     background-color: #222222;
@@ -25,6 +25,7 @@ body{
     background-color: #20775E;
     align-items: center;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .layout.header-text{
@@ -43,10 +44,10 @@ body{
     font-weight: 500;
     font-size: 35px;
     line-height: 1.2;
-    
+
     color: #D4C5C7;
 
-    text-shadow: 0 0 8px #000000, 0 0 5px #000000;
+    text-shadow: 0 0 5px #000000, 0 0 8px #000000;
     
 
 }
@@ -65,13 +66,13 @@ body{
     margin: 0px 15px 0px 15px;
 }
 
-a.main.game-card{
+.game-card{
     display: inline-block;
     text-decoration: none;
     text-align: center;
 }
 
-.main.game-title{
+.game-title{
     background-color: #685F74;
     width: 100%;
     border-radius: 15px;
@@ -79,13 +80,91 @@ a.main.game-card{
     vertical-align: middle;
 }
 
-.main.game-picture{
+img.game-picture{
     padding: 10px 0px 10px 0px;
     width: 90%;
 }
 
-div.main.game-picture{
+div.game-picture{
     background-color: #685F74;
     border-radius: 15px;
     width: 100%;
+}
+
+.game.game-card{
+    height: 90%;
+    margin-top: 5%;
+    margin-left: 20px;
+    margin-bottom: 4.75%;
+    width: 74%
+}
+
+.game.back-button{
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    background-color: #92CC8F;
+    border-radius: 20px;
+    color: #20775E;
+    font-family: 'Kanit', sans-serif;
+    font-size: 25px;
+}
+
+.game.game-details-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+}
+
+.game.steam-description-title{
+    text-align: center;
+}
+
+.game.steam-desc{
+    background-color: #685F74;
+    border-radius: 15px;
+}
+
+.game.description{
+    overflow: auto;
+    height: 600px;
+    margin: 0px 20px 0px 20px;
+    color: #070707;
+    font-size: 17px;
+    line-height: 1.35;
+}
+
+/* For WebKit browsers */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #20775E;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #92CC8F;
+    border-radius: 6px;
+    border: 1px solid #000000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #506b4e;
+}
+
+.game.details-grid{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    gap: 20px;
+}
+
+.game.my-experience{
+    background-color: #685F74;
+}
+
+.game.extra-details{
+    background-color: #685F74;
 }
