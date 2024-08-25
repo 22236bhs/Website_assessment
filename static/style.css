@@ -1,105 +1,91 @@
-.head{
-    height: 200px;
-    background-color: crimson;
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+body{
+    background-color: #222222;
 }
 
-.head-text{
-    text-align: center;
-}
-
-.head input[type=text]{
-    text-align: center;
-    margin-left: auto;
-}
-
-.main.w3-card-4{
-    width: 300px;
-}
-
-
-.three-column{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.main-body{
+    width: 80%;
+    background-color: #32292F;
+    
     margin: auto;
+    padding-bottom: 50px;
 }
 
-h2.main{
-    font-size: 20px;
-}
 
-a.main{
-    text-decoration: none;
-}
-
-.main.game-name{
-    text-align: center;
-    padding-top: 6px;
-}
-
-.game.one-two-one-column{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-}
-
-.game.info{
-    border-right: black solid 3px;
-    border-left: black solid 3px; 
-    padding: 0px 10px 0px 10px;
-    height: 600px;
-}
-
-.game.game-name{
-    text-align: center;
-}
-
-.game.picture-card{
-    width: 300px;
-    max-width: fit-content;
-    border-left: black solid 3px;
-
-} 
-
-
-
-.game.game-picture{
-    width: 100%;
-}
-
-p.game.description{
-    font-size: 13px;
-    line-height: 1.35;
-    overflow: auto;
-    height: 440px;  
-}
-
-.game.titles{
-    text-decoration: underline;
-}
-
-.game.extra{
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    border-right: black solid 3px
-}
-
-.game.extra-info{
-    border-bottom: black solid 3px;
-}
-
-.body{
-    width: 90%;
-    margin: auto;
-}
-
-div.main{
+.title{
+    height: 100%;
+    display: flex;
+    align-items: center;
     margin-left: 18px;
 }
 
-.main.game-card:hover{
-    scale: 1.1;
+.header{
+    height: 120px;
+    background-color: #20775E;
+    align-items: center;
+    border-radius: 10px;
 }
 
-.main.game-card{
-    transition: 0.2s;
-    background-color: #ffffff;
+.layout.header-text{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 18px;  
+    font-size: 50px;
+}
+
+.header-text{
+    
+
+    
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 1.2;
+    
+    color: #D4C5C7;
+
+    text-shadow: 0 0 8px #000000, 0 0 5px #000000;
+    
+
+}
+
+.header-image{
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.main.game-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin: 0px 15px 0px 15px;
+}
+
+a.main.game-card{
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.main.game-title{
+    background-color: #685F74;
+    width: 100%;
+    border-radius: 15px;
+    height: 90px;
+    vertical-align: middle;
+}
+
+.main.game-picture{
+    padding: 10px 0px 10px 0px;
+    width: 90%;
+}
+
+div.main.game-picture{
+    background-color: #685F74;
+    border-radius: 15px;
+    width: 100%;
 }

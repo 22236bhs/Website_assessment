@@ -10,8 +10,12 @@ def ExQuery(string, params=()):
 
 @app.route("/")
 def home():
-    names = ExQuery("SELECT id, name, picture_link FROM steam_library ORDER BY hours DESC;")
-    return render_template("index.html", names=names)
+    games = ExQuery("SELECT id, name, picture_link FROM steam_library ORDER BY hours DESC;")
+    for i in range(len(games)):
+        games[i] = {"id": games[i][0],
+                    "name": games[i][1],
+                    "pic_link": games[i][2]}
+    return render_template("index.html", games=games)
 
 @app.route("/game/<int:id>")
 def Game(id):
