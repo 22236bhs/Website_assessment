@@ -5,9 +5,12 @@
 <div class="main game-grid">
     {% for game in games %}
     <a class="main game-card" href="/game/{{game['id']}}">
-        <h1 class="main game-title header-text">{{ game['name'] }}</h1>
+        <div class="main game-title">
+            <h1 class="main game-title header-text">{{ game['name'] }}</h1>
+        </div>
         <div class="main game-picture">
-            <img src="{{ url_for('static', filename='images/' + game['pic_link']) }}" alt="Steam Library Image" class="main game-picture">
+            <img src="{{ url_for('static', filename='images/' + game['pic_link']) }}" alt="Steam Library Image"
+                class="main game-picture">
         </div>
     </a>
     {% endfor %}
