@@ -14,7 +14,7 @@
         <h1 class="game steam-description-title header-text">
             Steam Description
         </h1>
-        <p class="game description">
+        <p class="game description overflow">
             {{ game['description'] | replace("\n", '<br>') | safe }}
         </p>
     </div>
@@ -25,16 +25,32 @@
                 <h1 class="game header-text">
                     Details
                 </h1>
-                <h2 class="game details">
+                <h3 class="game details">
                     Release Date: {{ game['release_date'] }}
-                </h2>
-                <h2 class="game details">
+                </h3>
+                <h3 class="game details">
                     Developer: {{ game['studio_name'] }}
-                </h2>
+                </h3>
             </div>
 
             <div class="game my-experience">
+                <h1 class="game header-text">
+                    My Experience
+                </h1>
+                <h3 class="game my-hours">
+                    My Hours: {{ game['hours'] }}
+                </h3>
+                <h3 class="game my-rating">
+                    My Rating: {{ game['my_rating'] }}
+                </h3>
 
+                <h3 class="game my-review">
+                    My Review: 
+                    <p class="game description">
+                        {{ game['my_review'] }}
+                    </p>
+                </h3>
+                
             </div>
         </div>
     </div>
