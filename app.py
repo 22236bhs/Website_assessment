@@ -19,7 +19,7 @@ def home():
 
 @app.route("/game/<int:id>")
 def Game(id):
-    game = ExQuery('''SELECT steam_library.id, name, studios.studio_name, hours, steam_release_date, steam_description, picture_link, my_rating, my_review
+    game = ExQuery('''SELECT steam_library.id, name, studios.studio_name, hours, steam_release_date, steam_description, picture_link, my_rating, my_review, steam_rating, steam_price
 FROM steam_library 
 JOIN studios ON steam_library.studio_id = studios.id 
 WHERE steam_library.id = ?''', (id,))
@@ -32,7 +32,9 @@ WHERE steam_library.id = ?''', (id,))
             "description": game[5],
             "pic_link": game[6],
             "my_rating": game[7],
-            "my_review": game[8]}
+            "my_review": game[8],
+            "steam_rating": game[9],
+            "steam_price": game[10]}
     game["description"] = game["description"].replace("\\n", "\n")
     return render_template("game.html", game=game)
 
