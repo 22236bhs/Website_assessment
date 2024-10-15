@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Steam Website</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 </head>
+
 <body>
     <div class="main-body">
         <div class="header">
@@ -14,13 +14,14 @@
                 <a href="/" class="home-page-link">
                     <img src="{{ url_for('static', filename='images/omg.png') }}" alt="picture" class="header-image">
                 </a>
-                
-                <h1 class="layout header-text">Olly’s Amazing Website Extravaganza</h1>
+
+                <h1 class="layout header-text">My Steam Database</h1>
             </div>
         </div>
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
     </div>
-    
+
 </body>
+
 </html>

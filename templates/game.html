@@ -1,59 +1,65 @@
 {% extends "layout.html" %}
 {% block content %}
 
+<a href="/" class="game back-button">Back</a>
 <div class="game game-details-grid">
     <div class="game game-card">
         <h1 class="game game-title header-text">{{ game['name'] }}</h1>
         <div class="game game-picture">
-            <img src="{{ url_for('static', filename='images/' + game['pic_link']) }}" alt="Steam Library Image" class="game game-picture">
+            <img src="{{ url_for('static', filename='images/' + game['pic_link']) }}"
+                alt="{{ game['name'] }} game picture" class="game game-picture">
         </div>
-        <a href="/" class="game back-button">Back</a>
+
+    </div>
+
+    <div class="game extra-details">
+        <h1 class="game header-text">
+            Details
+        </h1>
+        <h3 class="game details">
+            Release Date: {{ game['release_date'] }}
+        </h3>
+        <h3 class="game details">
+            Developer: {{ game['studio_name'] }}
+        </h3>
+        <h3 class="game details">
+            Steam rating: {{ game['steam_rating'] }}/100
+        </h3>
+        <h3 class="game details">
+            Steam price: NZ${{ game['steam_price'] }}
+        </h3>
     </div>
 
     <div class="game steam-desc">
         <h1 class="game steam-description-title header-text">
             Steam Description
         </h1>
-        <p class="game description overflow">
+        <p class="game description steam-desc">
             {{ game['description'] | replace("\n", '<br>') | safe }}
         </p>
     </div>
+    <div>
+        <div class="game my-experience">
+            <h1 class="game header-text">
+                My Experience
+            </h1>
+            <h3 class="game my-hours">
+                My Hours: {{ game['hours'] }} hours
+            </h3>
+            <h3 class="game my-rating">
+                My Rating: {{ game['my_rating'] }}/10
+            </h3>
 
-    <div class="game other-details">
-        <div class="game details-grid">
-            <div class="game extra-details">
-                <h1 class="game header-text">
-                    Details
-                </h1>
-                <h3 class="game details">
-                    Release Date: {{ game['release_date'] }}
-                </h3>
-                <h3 class="game details">
-                    Developer: {{ game['studio_name'] }}
-                </h3>
-            </div>
+            <h3 class="game my-review">
+                My Review:
+                <p class="game description">
+                    {{ game['my_review'] }}
+                </p>
+            </h3>
 
-            <div class="game my-experience">
-                <h1 class="game header-text">
-                    My Experience
-                </h1>
-                <h3 class="game my-hours">
-                    My Hours: {{ game['hours'] }}
-                </h3>
-                <h3 class="game my-rating">
-                    My Rating: {{ game['my_rating'] }}
-                </h3>
-
-                <h3 class="game my-review">
-                    My Review: 
-                    <p class="game description">
-                        {{ game['my_review'] }}
-                    </p>
-                </h3>
-                
-            </div>
         </div>
     </div>
+
 </div>
 
 {% endblock %}
