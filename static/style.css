@@ -66,7 +66,7 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
-    margin: 0px 15px 0px 15px;
+    margin: 40px 15px 0px 15px;
 
 }
 
@@ -76,6 +76,16 @@ body{
     text-align: center;
     vertical-align: bottom;
     margin-top: auto;
+}
+
+.main.game-card{
+    transition: 0.15s;
+    transition-timing-function: ease-in-out;
+    
+}
+
+.main.game-card:hover{
+    scale: 110%;
 }
 
 .game-title{
@@ -110,6 +120,12 @@ div.game-picture{
     background-color: #685F74;
     border-radius: 15px;
     width: 100%;
+    transition: 0.15s;
+    transition-timing-function: ease-in-out;
+}
+
+div.game-picture:hover{
+    background-color: #7f758d;
 }
 
 .game.game-card{

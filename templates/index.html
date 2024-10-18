@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block header %}
-<title>Steam Database</title>
+<title>Steam Database App</title>
 {% endblock %}
 
 {% block content %}
@@ -10,9 +10,6 @@
 <div class="main game-grid">
     {% for game in games %}
     <a class="main game-card" href="/game/{{game['id']}}">
-        <div class="main game-title">
-            <h1 class="main game-title header-text">{{ game['name'] }}</h1>
-        </div>
         <div class="main game-picture">
             <img src="{{ url_for('static', filename='images/' + game['pic_link']) }}"
                 alt="{{ game['name'] }} game picture" class="main game-picture">
