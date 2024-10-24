@@ -175,6 +175,7 @@ div.game.steam-desc{
     line-height: 1.35;
     color: #ded0d2;
     text-shadow: 0 0 5px #000000, 0 0 8px #000000;
+    margin-right: 10px;
 }
 
 p.game.steam-desc{
